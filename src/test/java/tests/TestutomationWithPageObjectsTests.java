@@ -15,6 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestutomationWithPageObjectsTests {
+    RegistrationPage registrationPage = new RegistrationPage();
 
     @BeforeAll
     static void setUp(){
@@ -27,20 +28,20 @@ public class TestutomationWithPageObjectsTests {
     void formTests(){
         String userName = "Ivan";
 
-        new RegistrationPage().openPage();
+        registrationPage.openPage();
 
-        new RegistrationPage().setFirstName(userName);
-        new RegistrationPage().setLastName("Ivanov");
-        new RegistrationPage().setEmail("Ivanov@mail.ru");
-        new RegistrationPage().setGender("Other");
-        new RegistrationPage().setNumber("8900076543");
-        new RegistrationPage().setValue("Physics");
-        new RegistrationPage().setWrapper("Reading");
-        new RegistrationPage().setPicture("src/test/resources/paddington-g51aae444a_640.jpg");
-        new RegistrationPage().setAddress("Some Address111");
-        new RegistrationPage().setState();
-        new RegistrationPage().setCity();
-        new RegistrationPage().setSubmit();
+        registrationPage.setFirstName(userName);
+        registrationPage.setLastName("Ivanov");
+        registrationPage.setEmail("Ivanov@mail.ru");
+        registrationPage.setGender("Other");
+        registrationPage.setNumber("8900076543");
+        registrationPage.setValue("Physics");
+        registrationPage.setWrapper("Reading");
+        registrationPage.setPicture("src/test/resources/paddington-g51aae444a_640.jpg");
+        registrationPage.setAddress("Some Address111");
+        registrationPage.setState();
+        registrationPage.setCity();
+        registrationPage.setSubmit();
 
 
         $("[id=dateOfBirthInput]").click();

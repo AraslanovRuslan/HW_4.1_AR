@@ -1,28 +1,13 @@
 package tests;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.selector.ByText;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPage;
-
-import java.io.File;
-
-import static com.codeborne.selenide.Condition.appear;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 
 public class TestutomationWithPageObjectsTests extends TestBase {
-
     @Test
     void formTests() {
         String userName = "Ivan";
 
         registrationPage.openPage();
-
         registrationPage.setFirstName(userName);
         registrationPage.setLastName("Ivanov");
         registrationPage.setEmail("Ivanov@mail.ru");
@@ -42,8 +27,5 @@ public class TestutomationWithPageObjectsTests extends TestBase {
         registrationPage.verifyResults("Gender", "Other");
         registrationPage.verifyResults("Mobile", "8900076543");
         registrationPage.verifyResults("Date of Birth", "26 May,1990");
-
     }
-
-
 }

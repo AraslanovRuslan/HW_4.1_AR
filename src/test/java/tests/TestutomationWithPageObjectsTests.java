@@ -33,8 +33,9 @@ public class TestutomationWithPageObjectsTests {
         new RegistrationPage().setLastName("Ivanov");
         new RegistrationPage().setEmail("Ivanov@mail.ru");
 
-        $("#userEmail").setValue("Ivanov@mail.ru");
-        $("#genterWrapper").$(new ByText("Other")).click();
+
+
+
         $("#userNumber").setValue("8900076543");
         $("[id=dateOfBirthInput]").click();
         $(".react-datepicker__month-select").click();

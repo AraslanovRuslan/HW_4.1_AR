@@ -3,6 +3,7 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
@@ -26,5 +27,7 @@ public class RegistrationPage {
     public void setEmail(String value){
         $("#userEmail").setValue(value);
     }
-
+    public void setGender(String value){
+        $("#genterWrapper").$(byText(value)).click();
+    }
 }

@@ -1,6 +1,9 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.selector.ByText;
+
+import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -30,4 +33,32 @@ public class RegistrationPage {
     public void setGender(String value){
         $("#genterWrapper").$(byText(value)).click();
     }
+    public void setNumber(String value){
+        $("#userNumber").setValue(value);
+    }
+    public void setValue(String value){
+        $("#subjectsInput").setValue(value).pressEnter();
+    }
+    public void setWrapper(String value){
+        $("#hobbiesWrapper").$(byText(value)).click();
+    }
+    public void setPicture(String value){
+        $("[id=uploadPicture]").uploadFile(new File(value));
+    }
+    public void setAddress(String value){
+        $("#currentAddress").setValue(value);
+    }
+    public void setState(){
+        $("#state").click();
+        $("#stateCity-wrapper").$(byText("NCR")).click();
+    }
+    public void setCity(){
+        $("#city").click();
+        $("#stateCity-wrapper").$(byText("Delhi")).click();
+    }
+    public void setSubmit() {
+        $("#submit").click();
+    }
+
+
 }

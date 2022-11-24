@@ -32,11 +32,17 @@ public class TestutomationWithPageObjectsTests {
         new RegistrationPage().setFirstName(userName);
         new RegistrationPage().setLastName("Ivanov");
         new RegistrationPage().setEmail("Ivanov@mail.ru");
+        new RegistrationPage().setGender("Other");
+        new RegistrationPage().setNumber("8900076543");
+        new RegistrationPage().setValue("Physics");
+        new RegistrationPage().setWrapper("Reading");
+        new RegistrationPage().setPicture("src/test/resources/paddington-g51aae444a_640.jpg");
+        new RegistrationPage().setAddress("Some Address111");
+        new RegistrationPage().setState();
+        new RegistrationPage().setCity();
+        new RegistrationPage().setSubmit();
 
 
-
-
-        $("#userNumber").setValue("8900076543");
         $("[id=dateOfBirthInput]").click();
         $(".react-datepicker__month-select").click();
         $(".react-datepicker__month-select").selectOption("May");
@@ -44,17 +50,11 @@ public class TestutomationWithPageObjectsTests {
         $(".react-datepicker__year-select").selectOption("1990");
         $(".react-datepicker__year-select").click();
         $(".react-datepicker__day--026").click();
-        $("#subjectsInput").click();
-        $("#subjectsInput").setValue("Physics");
-        $("#subjectsInput").pressTab();
-        $("#hobbiesWrapper").$(new ByText("Reading")).click();
-        $("[id=uploadPicture]").uploadFile(new File("src/test/resources/paddington-g51aae444a_640.jpg"));
-        $("#currentAddress").setValue("Some Address111");
-        $("#state").click();
-        $("#stateCity-wrapper").$(byText("NCR")).click();
-        $("#city").click();
-        $("#stateCity-wrapper").$(byText("Delhi")).click();
-        $("#submit").click();
+
+
+
+
+     //   $("#submit").click();
 
         $(".modal-content").shouldBe(Condition.visible);
         $(".modal-content").shouldHave(text("Ivan Ivanov"));

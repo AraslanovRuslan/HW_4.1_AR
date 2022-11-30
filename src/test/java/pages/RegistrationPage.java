@@ -57,11 +57,19 @@ public class RegistrationPage {
     public void setAddress(String value){
         $("#currentAddress").setValue(value);
     }
-    public void setStateCity(){
+   // public void setStateCity(){
+   //   $("#state").click();
+   //   $("#stateCity-wrapper").$(byText("NCR")).click();
+   //   $("#city").click();
+    //    $("#stateCity-wrapper").$(byText("Delhi")).click();
+    //}
+    public void setState(String value){
         $("#state").click();
-        $("#stateCity-wrapper").$(byText("NCR")).click();
+        $("#stateCity-wrapper").$(byText(value)).click();}
+
+    public void setCity(String value){
         $("#city").click();
-        $("#stateCity-wrapper").$(byText("Delhi")).click();
+        $("#stateCity-wrapper").$(byText(value)).click();
     }
     public void setSubmit() {
         $("#submit").click();

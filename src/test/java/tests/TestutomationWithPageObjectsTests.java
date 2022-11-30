@@ -18,7 +18,8 @@ public class TestutomationWithPageObjectsTests extends TestBase {
         registrationPage.setWrapper("Reading");
         registrationPage.setPicture("src/test/resources/paddington-g51aae444a_640.jpg");
         registrationPage.setAddress("Some Address111");
-        registrationPage.setStateCity();
+        registrationPage.setState("NCR");
+        registrationPage.setCity("Delhi");
         registrationPage.setSubmit();
         registrationPage.verifyResultsModalApperas();
         registrationPage.verifyResults("Student Name",userName + " Ivanov");
